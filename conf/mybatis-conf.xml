@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	
+	<!-- 
+		5.databaseIdProvider:
+			Mybatis用来支持多数据库厂商。Mybatis可以根据不同的数据库执行不同的sql语句
+			DB_VENDOR: VendorDatabaseIdProvider 作用就是得到数据库厂商的标识名.
+					   Connection.getMetaData().getDataBaseProductName();	
+			常见的数据库厂商的标识名:
+				MySQL:  MySQL
+				Oracle: Oracle
+				SQL Server:  SQL Server		
+	 --> 
+	 <databaseIdProvider type="DB_VENDOR">
+	 	<!-- 为数据库厂商的标识名起别名 -->
+	 	<property name="MySQL" value="mysql"/>
+	 	<property name="Oracle" value="oracle"/>
+	 	<property name="SQL Server" value="sqlserver"/>
+	 </databaseIdProvider>
+	
+</configuration>
